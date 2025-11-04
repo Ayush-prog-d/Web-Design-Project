@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: #0b1b2b;
+}
+
+/* Header */
+.hero {
+  background: url('image/barnawapara-forest.webp') no-repeat center/cover;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.navbar .logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color:#ffd700;
+  font-weight: 400;
+}
+
+.account {
+  border: 1px solid #ffd700;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero-content .tagline {
+  letter-spacing: 2px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+.hero-content h1 span {
+  color: #ffd700;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ffd700;
+  color: #000;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Sections */
+section {
+  padding: 80px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+section h4 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+section p {
+  line-height: 1.7;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+section a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+section img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Cards */
+.destinations {
+  flex-direction: column;
+  text-align: center;
+}
+
+.destinations .cards {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 180px;
+  background-color: #16263a;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 10px;
+}
+
+/* Why Section */
+.why {
+  flex-direction: column;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.stat h3 {
+  color: #ffd700;
+  font-size: 32px;
+}
+
+/* Other Tours */
+.other-tours {
+  flex-direction: column;
+  text-align: center;
+  background: url('image/others.jpg') no-repeat center/cover;
+}
+
+/* Travel Plan */
+.plan {
+  flex-direction: column;
+  text-align: center;
+}
+
+.plan-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.plan-grid div {
+  padding: 15px;
+  background-color: #16263a;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #0b1b2b;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+.subscribe {
+  margin-bottom: 30px;
+}
+
+.subscribe input {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.subscribe button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #ffd700;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 20px;
+}
+
+.info h4 {
+  margin-bottom: 10px;
+}
+
+.copy {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

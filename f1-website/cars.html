@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Cars Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+  <header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+      <img src="images/teams/f1-logo.jpg" alt="F1 Logo" class="f1-logo">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Teams</a></li>
+      <li><a href="#">Drivers</a></li>
+      <li><a href="#" class="active">Cars</a></li>
+      <li><a href="#">Standings</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- Car Showcase Section -->
+<div class="car-showcase">
+  <button class="arrow left" onclick="prevCar()">&#10094;</button>
+
+  <img id="carImage" src="images/cars/mercedes1-car.jpg" alt="F1 Car" class="car-large">
+
+  <button class="arrow right" onclick="nextCar()">&#10095;</button>
+</div>
+<script>
+  // List of car images
+  const cars = [
+    "images/cars/mercedes1-car.jpg",
+    "images/cars/ferrari1-car.jpg",
+    "images/cars/redbull1-car.jpg",
+    "images/cars/mclaren1-car.jpg",
+    "images/cars/astonmartin1-car.jpg",
+    "images/cars/alpine1-car.jpg",
+    "images/cars/Williams1-car.jpg",
+    "images/cars/alfaromeo1-car.jpg",
+    "images/cars/Sauber1-car.jpg",
+    "images/cars/racingbulls1-car.jpg"
+  ];
+
+  let currentIndex = 0;
+  const carImage = document.getElementById("carImage");
+
+  function showCar(index) {
+    if (index < 0) index = cars.length - 1;
+    if (index >= cars.length) index = 0;
+    currentIndex = index;
+    carImage.src = cars[currentIndex];
+  }
+
+  function nextCar() {
+    showCar(currentIndex + 1);
+  }
+
+  function prevCar() {
+    showCar(currentIndex - 1);
+  }
+</script>
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <p>&copy; 2025 Formula 1 Project | Made By Ayush Verma</p>
+    </div>
+    <div class="footer-right">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0B0B0D; 
+  color: #E6E7E8; 
+  line-height: 1.6;
+}
+
+/* Header 
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(17, 17, 17, 0.9); 
+  backdrop-filter: blur(10px); 
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #E10600; 
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #E6E7E8;
+  font-weight: bold;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #00BFA9; 
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+.nav-links a:hover {
+  color: #E10600; 
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.logo img.f1-logo {
+  height: 50px;      
+  width: auto;
+  display: block;
+}
+
+
+/* Main */
+main {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+footer {
+  background: #111;
+  text-align: center;
+  padding: 15px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(to right, #0B0B0D, #1A1A1A);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  color: #E10600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #E6E7E8;
+}
+
+/* Car Animation */
+.car-container {
+  width: 100%;
+  height: 160px;
+  background: #000; 
+  overflow: hidden;
+  position: relative;
+  margin: 40px 0;
+  border-top: 3px solid #ff1801;
+  border-bottom: 3px solid #ff1801;
+}
+
+
+.car-banner {
+  position: absolute;
+  top: 50%;
+  left: -500px; 
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  transform: translateY(-50%);
+  animation: moveAcross 10s linear infinite;
+}
+
+.car {
+  width: 220px;
+  height: auto;
+  margin-right: 15px; 
+}
+
+.race-info {
+  background: #ff1801;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 8px;
+  white-space: nowrap; 
+}
+
+@keyframes moveAcross {
+  0% { left: -500px; }
+  100% { left: 110%; }
+}
+
+/* Teams Section */
+.teams {
+  padding: 60px 20px;
+  text-align: center;
+  background: #0B0B0D;
+}
+
+.teams h2 {
+  font-size: 2rem;
+  color: #E10600;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+
+.team-card {
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Team Logo */
+.team-logo {
+  width: 80px;
+  margin-top: 15px;
+}
+.team-logo {
+  width: 80px;     
+  height: auto;
+  display: block;
+  margin: 10px auto; 
+}
+
+
+/* Team Car Image */
+.team-car {
+  width: 100%;
+  margin-top: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.team-info {
+  padding: 15px;
+  text-align: left;
+  color: #E6E7E8;
+}
+
+.team-info h3 {
+  margin-bottom: 10px;
+  color: #00BFA9;
+}
+.team-info p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+/* Drivers Section */
+.drivers {
+  padding: 60px 20px;
+  text-align: center;
+  background: #0A0A0C;
+}
+
+.drivers h2 {
+  font-size: 2rem;
+  color: #E10600;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.driver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+/* Drivers Section */
+.drivers {
+  padding: 60px 20px;
+  text-align: center;
+  background: #0A0A0C;
+}
+
+.drivers h2 {
+  font-size: 2rem;
+  color: #E10600;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.driver-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+
+.driver-card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.driver-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.driver-card:hover .driver-card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  color: #E6E7E8;
+  text-align: center;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  padding: 15px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.driver-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.driver-card:hover .driver-card-inner {
+  transform: rotateY(180deg) scale(1.05); 
+}
+
+.cars {
+  padding: 60px 20px;
+  text-align: center;
+  background: #0B0B0D;
+}
+
+.cars h2 {
+  font-size: 2rem;
+  color: #E10600;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.car-card {
+  position: relative;
+  width: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.car-image {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.car-card:hover .car-image {
+  transform: scale(1.1);
+}
+
+.car-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #E6E7E8;
+  padding: 10px;
+  text-align: left;
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.car-card:hover .car-overlay {
+  transform: translateY(0);
+}
+
+.car-overlay h3 {
+  margin: 0;
+  color: #00BFA9; 
+  font-size: 1.1rem;
+}
+
+.car-overlay p {
+  margin: 2px 0 0 0;
+  font-size: 0.9rem;
+}
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer a {
+  color: #ff1801; 
+  text-decoration: none;
+  margin-left: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.car-showcase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: 80vh; 
+  background: linear-gradient(135deg, #0A0A0C, #1C1C1F);
+  color: #E6E7E8;
+  position: relative;
+}
+
+.car-display {
+  text-align: center;
+}
+
+.car-large {
+  width: 1000px;
+  max-width: 95vw;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.car-caption {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #00BFA9;
+}
+
+.arrow {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #E10600;
+  font-size: 2.5rem;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  font-size: 2.5rem;
+  color: #fff;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 2;
+}
+
+.arrow:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.arrow.left {
+  left: 30px;
+}
+
+.arrow.right {
+  right: 30px;
+}
+nav ul li a.active {
+  color: #E10600;   
+  font-weight: bold;
+}
+
+
